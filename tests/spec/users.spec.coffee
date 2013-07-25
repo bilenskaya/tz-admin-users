@@ -5,7 +5,7 @@ _ = require 'underscore'
 
 clientRedis = redis.createClient()
 clientRedis.select 11
-Users = require '../app/users'
+Users = require '../../app/users'
 
 describe 'Users model', ->
 

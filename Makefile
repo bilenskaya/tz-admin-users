@@ -1,7 +1,7 @@
 REPORTER=spec
-TESTS=$(shell find ./tests -type f -name "*.coffee")
+TESTS=$(shell find ./tests/ -type f -name "*.coffee")
 
-test:
+tests:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
 		--require chai \
 		--compilers coffee:coffee-script \
@@ -10,4 +10,4 @@ test:
 		--watch \
 		$(TESTS)
 
-.PHONY: test
+.PHONY: tests

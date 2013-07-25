@@ -19,6 +19,12 @@ module.exports = function (clientRedis) {
       })
     },
 
+    getCountUsersReal: function(cb) {
+      r.hlen('users', function (err, res) {
+        cb(err, res);
+      })
+    },
+
     // users - хеш с информацией о пользователе
     addUser: function (user, cb) {
       if (!user) {
@@ -136,9 +142,7 @@ module.exports = function (clientRedis) {
 
     // Создаёт и возвращаеть уникальный ID
     createUniqueId: function(cb) {
-      clientRedis.incr(countUsers, function(err, res) {
-        cb(err, res);
-      });
+      clientRedis.incr(countUsers, cb);
     }
   };
 };
