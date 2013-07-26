@@ -4,11 +4,12 @@ TZ client + server
 API on redis+node.js, frontend on angular+yeoman.io
 
 
-### RUN
+### Install & run
 
-  node index.js
+    npm install
+    node index.js
   
   
 ### Tests
 
-  make
+    make
