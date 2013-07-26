@@ -7,7 +7,6 @@ tests:
 		--compilers coffee:coffee-script \
 		--reporter $(REPORTER) \
 		--timeout 2000 \
-		--watch \
 		$(TESTS)
 
 .PHONY: tests
