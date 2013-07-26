@@ -1,0 +1,26 @@
+<div class="hero-unit">
+
+  <a class="btn pull-right" href="#/add">
+    <i class="icon-plus"></i> Добавить
+  </a>
+
+  <h3>Список юзеров</h3>
+
+  <table class="table users table-bordered table-striped table-hover">
+    <thead>
+      <th>#</th>
+      <th>Имя</th>
+      <th style="width: 50px"></th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in users" ng-click="edit(item.id)">
+        <td>{{item.id}}</td>
+        <td>{{item.name}}</td>
+        <td> <button ng-click="deleteUser(item.id)" class="btn">
+          <i class="icon-trash">></i>
+        </button> </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>

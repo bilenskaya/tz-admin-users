@@ -1,0 +1,44 @@
+  <form class="form-horizontal well" 
+    ng-submit="saveUser(form)">
+  <fieldset>
+    <legend ng-show="action == 'add'">Добавить нового пользователя</legend>
+    <legend ng-show="action == 'edit'">Редактировать пользователя</legend>
+
+    <div class="control-group">
+      <label class="control-label">Имя</label>
+      <div class="controls">
+        <input required ng-model="form.name" type="text" class="input-xlarge">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Email</label>
+      <div class="controls">
+        <input ng-model="form.email" type="text" class="input-xlarge">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Возраст</label>
+      <div class="controls">
+        <input ng-model="form.age" type="text" class="input-xlarge">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Пол</label>
+      <div class="controls">
+        <select ng-model="form.gender">
+          <option value="male">Мужской</option>
+          <option value="female">Женский</option>
+        </select>
+      </div>
+    </div>
+
+    
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Save changes</button>
+      <a  href="#/" class="btn">Cancel</a>
+    </div>
+  </fieldset>
+</form>

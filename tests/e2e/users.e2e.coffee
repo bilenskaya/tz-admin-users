@@ -12,7 +12,7 @@ createUser = (params, cb = ->) ->
 
 describe 'API Users', ->
 
-  beforeEach ->
+  afterEach ->
     clientRedis.flushdb();
 
   it 'should error responce on undefined res', (done) ->
